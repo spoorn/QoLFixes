@@ -3,26 +3,28 @@
   "id": "qolfixes",
   "version": "${version}",
   "name": "QoLFixes",
-  "description": "",
-  "authors": [],
+  "description": "Quality of Life changes for Minecraft on the Fabric Loader",
+  "authors": [
+    "spoorn"
+  ],
   "contact": {},
   "license": "LGPL-3.0",
   "icon": "assets/qolfixes/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
-      "org.spoorn.qolfixes.client.QolfixesClient"
+      "org.spoorn.qolfixes.client.QolFixesClient"
     ],
     "main": [
-      "org.spoorn.qolfixes.Qolfixes"
+      "org.spoorn.qolfixes.QolFixes"
     ]
   },
   "mixins": [
     "qolfixes.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.13.3",
+    "fabricloader": "*",
     "fabric": "*",
-    "minecraft": "1.18.2"
+    "minecraft": ">=1.18"
   }
 }
