@@ -1,0 +1,4 @@
+{
+  //True to disable the "...moved too quickly!..." error message on servers when players move too fast, along with the teleport.  [default = true]
+  "disableMovedTooQuickly": true
+}
