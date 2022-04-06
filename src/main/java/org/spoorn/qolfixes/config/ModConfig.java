@@ -12,6 +12,9 @@ public class ModConfig implements Config {
     @Comment("True to disable the \"...moved too quickly!...\" error message on servers when players move too fast, along with the teleport.  [default = true]")
     public boolean disableMovedTooQuickly = true;
     
+    @Comment("True to disable vehicle \"...moved too quickly!...\" error message on servers when players in vehicles move too fast, along with the teleport.  [default = true]")
+    public boolean disableVehicleMovedTooQuickly = true;
+    
     public static void init() {
         CONFIG = OmegaConfig.register(ModConfig.class);
     }
