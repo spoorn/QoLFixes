@@ -15,6 +15,10 @@ public class ModConfig implements Config {
     @Comment("True to disable vehicle \"...moved too quickly!...\" error message on servers when players in vehicles move too fast, along with the teleport.  [default = true]")
     public boolean disableVehicleMovedTooQuickly = true;
     
+    @Comment("True to replace Criterion sets in the AbstractCriterion class with a Concurrent Hash Set to make it thread safe.  [default = true]\n" +
+            "This prevents issues such as https://github.com/Draylar/inmis/issues/117")
+    public boolean useThreadSafeAbstractCriterionProgressions = true;
+    
     public static void init() {
         CONFIG = OmegaConfig.register(ModConfig.class);
     }
