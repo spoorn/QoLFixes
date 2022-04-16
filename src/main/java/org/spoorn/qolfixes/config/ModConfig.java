@@ -22,6 +22,11 @@ public class ModConfig implements Config {
     @Comment("Makes various ShulkerEntity code NPE safe.  False to disable.  [default = true]")
     public boolean useNPESafeShulkerEntity = true;
     
+    @Comment("Changes some items to have max ItemStack size of 64 instead of their lower vanilla values [default = true]\n" +
+            "Applies for: Saddle, Bucket, Milk Bucket, Entity Buckets, Powdered Snow Buckets, Snowball, Boats, Ender Pearls,\n" +
+            "\tEggs, Enchanted Books, Honey Bottles, Potions, Music Discs, Horse Armor, Stews")
+    public boolean increaseMaxItemStackSizeForLowerOnes = true;
+    
     public static void init() {
         CONFIG = OmegaConfig.register(ModConfig.class);
     }
