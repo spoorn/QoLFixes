@@ -19,6 +19,9 @@ public class ModConfig implements Config {
             "This prevents issues such as https://github.com/Draylar/inmis/issues/117")
     public boolean useThreadSafeAbstractCriterionProgressions = true;
     
+    @Comment("Makes various ShulkerEntity code NPE safe.  False to disable.  [default = true]")
+    public boolean useNPESafeShulkerEntity = true;
+    
     public static void init() {
         CONFIG = OmegaConfig.register(ModConfig.class);
     }

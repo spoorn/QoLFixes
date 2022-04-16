@@ -24,6 +24,7 @@ public class AbstractCriterionMixin<T extends AbstractCriterionConditions> {
      * Replaces the Set of Criterions with a ConcurrentHashSet to be thread safe.
      * 
      * @author spoorn
+     * @reason https://github.com/Draylar/inmis/issues/117
      */
     @Overwrite
     public final void beginTrackingCondition(PlayerAdvancementTracker manager2, Criterion.ConditionsContainer<T> conditions) {
