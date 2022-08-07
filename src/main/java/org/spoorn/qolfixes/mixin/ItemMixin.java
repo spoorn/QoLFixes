@@ -15,7 +15,9 @@ public class ItemMixin {
     
     @Inject(method = "getMaxCount", at = @At(value = "HEAD"), cancellable = true)
     private void modifyItemMaxCounts(CallbackInfoReturnable<Integer> cir) {
-        if (ModConfig.get().increaseMaxItemStackSizeForLowerOnes && QolUtil.INCREASE_MAX_STACK_ITEMS.contains(this.getClass())) {
+        // Null check as charm checks item stacks during mod load time which can run into a NULL here
+        ModConfig config = ModConfig.get();
+        if (config != null && config.increaseMaxItemStackSizeForLowerOnes && QolUtil.INCREASE_MAX_STACK_ITEMS.contains(this.getClass())) {
             cir.setReturnValue(SIXTY_FOUR);
             cir.cancel();
         }
