@@ -4,16 +4,18 @@
   "package": "org.spoorn.qolfixes.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "ServerPlayNetworkHandlerMixin",
     "AbstractCriterionMixin",
-    "ShulkerEntityMixin",
-    "ItemMixin",
     "AnvilScreenHandlerMixin",
-    "ForgingScreenHandlerAccessor",
-    "StewItemMixin",
     "BucketItemMixin",
+    "ForgingScreenHandlerAccessor",
+    "ItemMixin",
     "MilkBucketItemMixin",
-    "PowderSnowBucketItemMixin"
+    "PowderSnowBucketItemMixin",
+    "ServerPlayNetworkHandlerMixin",
+    "ShulkerEntityMixin",
+    "StewItemMixin",
+    "StructureTemplate_PalettedBlockInfoListAccessor",
+    "StructureTemplate_PalettedBlockInfoListMixin"
   ],
   "client": [
   ],

@@ -27,6 +27,9 @@ public class ModConfig implements Config {
             "\tEggs, Enchanted Books, Honey Bottles, Potions, Music Discs, Horse Armor, Stews")
     public boolean increaseMaxItemStackSizeForLowerOnes = true;
     
+    @Comment("Fixes ConcurrentModificationException with StructureTemplate.PalettedBLockInfoList [default = true]")
+    public boolean fixCMEPalettedBlockInfoList = true;
+    
     public static void init() {
         CONFIG = OmegaConfig.register(ModConfig.class);
     }
