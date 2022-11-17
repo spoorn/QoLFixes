@@ -35,6 +35,10 @@ public class ModConfig implements Config {
     }
 
     public static ModConfig get() {
+        // In case mixins are called before our mod initializer
+        if (CONFIG == null) {
+            init();
+        }
         return CONFIG;
     }
 
