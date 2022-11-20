@@ -1,2 +1,3 @@
 accessWidener	v1	named
+
 mutable field net/minecraft/structure/StructureTemplate$PalettedBlockInfoList blockToInfos Ljava/util/Map;

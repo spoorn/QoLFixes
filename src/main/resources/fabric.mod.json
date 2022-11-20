@@ -22,10 +22,10 @@
   "mixins": [
     "qolfixes.mixins.json"
   ],
+  "accessWidener" : "qolfixes.accesswidener",
   "depends": {
     "fabricloader": "*",
     "fabric": "*",
     "minecraft": ">=1.19"
-  },
-  "accessWidener" : "qolfixes.accesswidener"
+  }
 }

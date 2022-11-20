@@ -7,12 +7,10 @@ plugins {
 sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
+archivesBaseName = project.archives_base_name
+
 version = project.mod_version
 group = project.maven_group
-
-loom {
-    accessWidenerPath = file("src/main/resources/qolfixes.accesswidener")
-}
 
 repositories {
     // Add repositories to retrieve artifacts from in here.
@@ -95,4 +93,9 @@ publishing {
         // The repositories here will be used for publishing your artifact, not for
         // retrieving dependencies.
     }
+}
+
+// Has to be at the end or else sometimes mod doesn't load.  Unsure why
+loom {
+    accessWidenerPath = file("src/main/resources/qolfixes.accesswidener")
 }
