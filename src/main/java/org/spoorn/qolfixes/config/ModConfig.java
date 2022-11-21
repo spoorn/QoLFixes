@@ -30,6 +30,11 @@ public class ModConfig implements Config {
     @Comment("Fixes ConcurrentModificationException with StructureTemplate.PalettedBLockInfoList [default = true]")
     public boolean fixCMEPalettedBlockInfoList = true;
     
+    @Comment("Set to true to prevent kicking clients off when Sound packets are invalid on the server.  [default = false]\n" +
+            "It will instead print the error along with the sound ID that caused the error, and continue on.\n" +
+            "If set to false, this at least adds extra error logging to print the sound ID so you can locate the mod that's causing it.")
+    public boolean preventClientKickOnBadSoundPacket = false;
+    
     public static void init() {
         CONFIG = OmegaConfig.register(ModConfig.class);
     }

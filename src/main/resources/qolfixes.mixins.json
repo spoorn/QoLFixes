@@ -10,6 +10,7 @@
     "ForgingScreenHandlerAccessor",
     "ItemMixin",
     "MilkBucketItemMixin",
+    "PacketEncoderMixin",
     "PowderSnowBucketItemMixin",
     "ServerPlayNetworkHandlerMixin",
     "ShulkerEntityMixin",
